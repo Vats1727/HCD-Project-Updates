@@ -1,0 +1,29 @@
+Temperature Sensor Code:
+Temperature Sensoring Code:
+#include <OneWire.h>
+#include <DallasTemperature.h>
+
+// Define the digital pin connected to the DS18B20 data pin
+#define ONE_WIRE_BUS 2  
+
+// Setup a oneWire instance
+OneWire oneWire(ONE_WIRE_BUS);
+
+// Pass oneWire reference to DallasTemperature library
+DallasTemperature sensors(&oneWire);
+
+void setup() {
+    Serial.begin(9600); // Start serial communication
+    sensors.begin();    // Start the temperature sensor
+}
+
+void loop() {
+    sensors.requestTemperatures(); // temperature
+    float tempC = sensors.getTempCByIndex(0); // celcius
+
+    Serial.print("Temperature: ");
+    Serial.print(tempC);
+    Serial.println(" °C");
+
+    delay(1000);
+}
