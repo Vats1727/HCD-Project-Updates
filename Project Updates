@@ -5,16 +5,11 @@ Day-1 26/2/25
 -> designed Mechanical diagram for product.
 -> Also tested temperature sensor .
 
-
-
 #Vatsal
 -> Worked on Basic deign of product.
 -> Worked on Claculation of Nichrome Wire resistance and power supply.
 -> Tried to connect Charging module with battery .
 -> Succesfully done but Charging module get shot.
-
-
-
 
 #Harsh
 -> Problem for Bypassing the charging module.
@@ -22,8 +17,11 @@ Day-1 26/2/25
 -> Working on Battery discharge problem.
 -> Nicronwire length and heating fixing the issue.
 
-Day-2 8/03/25
 
+
+
+Day-2 8/03/25
+#Tvisha
 
 
 
@@ -35,16 +33,30 @@ Day-2 8/03/25
 -> Cretaed a circuit design in proteus and simulated it.
 -> Also worked with physical connection of arduino uno with temperature sensor.
 
+#Harsh
+-> Task-3 work stated
+-> Diagram drawing as per circutit.
+-> Some calculation work done for battery power
+-> Circuit Design virtually.
+-> Atiny85 program using microchip studio
+-> Starteed for temperature sensor working.
+
+
+
 
 
 Day-3 15/03/25
+#Tvisha
+
 
 #Vatsal
-
 ->Worked with physical components.
 -> Tried to connect arduino uno  with temperature sensor.
 -> Also helped in coonection of voltage booster with Battery.
 -> Helped in insulation of nichrome wire .
 
-
-
+#Harsh
+-> Working for connection of temperature sensor with heating wire
+-> Working of insulating the nicron wire for wawter resitance.
+-> Boost module working.
+-> Nicron wire is working with measuring temperature.
