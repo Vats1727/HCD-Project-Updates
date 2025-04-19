@@ -1,0 +1,44 @@
+#include <TinyWireM.h>
+#include <Tiny4kOLED.h>
+#include <OneWire.h>
+
+#define ONE_WIRE_BUS 4  // DS18B20 data pin
+OneWire ds(ONE_WIRE_BUS);
+
+void setup() {
+  oled.begin();
+  oled.clear();
+  oled.on();
+  oled.setFont(FONT6X8);  // Smaller font saves memory
+
+}
+
+void loop() {
+  byte data[2];
+
+  ds.reset();
+  ds.write(0xCC);  
+  ds.write(0x44);  
+  delay(750);
+
+  ds.reset();
+  ds.write(0xCC);
+  ds.write(0xBE);
+
+  data[0] = ds.read();
+  data[1] = ds.read();
+
+  int16_t rawTemp = (data[1] << 8) | data[0];
+  int tempC = (rawTemp * 10) >> 4;  // Use int instead of float
+
+  oled.clear();
+  oled.setCursor(0, 0);
+  oled.print(F("HCD Project (T.H.V.)"));
+
+  oled.setCursor(0, 2);
+  oled.print(F("Temp: "));
+  oled.print(tempC / 10);
+  oled.print(F(" C"));
+
+  delay(500);
+}
